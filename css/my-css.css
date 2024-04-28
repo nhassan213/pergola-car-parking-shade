@@ -194,5 +194,9 @@
     border-radius: 50%;
     z-index: 999; /* Ensure it appears above other content */
 }
-
+@media (max-width: 768px) {
+    .step-num-box {
+        display: none; /* Hide the div on small screens */
+    }
+}
 

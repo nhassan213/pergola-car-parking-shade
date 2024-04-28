@@ -281,7 +281,7 @@ a, i, .btn, .btn span, button, img, span, .nav-link, .dropdown-item, .social-ico
 .copyright{margin-top: 50px;}
 .copyright span a{font-weight: bold;}
 .theme-bg .copyright{border-top: 2px solid rgba(255,255,255,0.030); padding-top: 50px;}
-.footer-logo img{height: 150px;}
+.footer-logo img{height: auto;}
 .primary-footer, .primary-footer a{color: #1c1d3e;}
 .primary-footer h4{margin-bottom: 20px;}
 .footer-1{margin-top: 100px; padding-top: 150px;}
