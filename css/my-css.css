@@ -7,7 +7,7 @@
       /* For mobile screens */
       @media (max-width: 768px) {
           margin-left: 0; /* Reset left margin */
-          margin-top: -10%; /* Adjust top margin for mobile */
+          margin-top: -15%; /* Adjust top margin for mobile */
           left: 20%; /* Move element to center horizontally */
           transform: translateX(-50%); /* Center the element horizontally */
       }
