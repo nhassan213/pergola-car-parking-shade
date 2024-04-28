@@ -1,0 +1,198 @@
+
+  .sun_rain {
+      position: absolute;
+      margin-left: 28%;
+      margin-top: 3%;
+
+      /* For mobile screens */
+      @media (max-width: 768px) {
+          margin-left: 0; /* Reset left margin */
+          margin-top: -10%; /* Adjust top margin for mobile */
+          left: 20%; /* Move element to center horizontally */
+          transform: translateX(-50%); /* Center the element horizontally */
+      }
+  }
+
+  section .sun {
+    position: absolute;
+    left: 5.5rem;
+    display: block;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    background: #ffc100;
+    /*animation: spin 2s ease-in-out;
+    animation: spin2 4s infinite linear;*/
+    box-shadow: 0 0 8px 10px #ffc100, inset 0 0 4px 5px #ff900d;
+    animation: cloud 12s linear infinite;
+  }
+  section .cloud:after,
+  section .cloud:before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    background: #fff;
+  }
+  section .cloud {
+    z-index: 1;
+    width: 9.75rem;
+    height: 3.75rem;
+    background: #fff;
+    border-radius: 6.25rem;
+    -webkit-border-radius: 6.25rem;
+    -moz-border-radius: 6.25rem;
+    position: absolute;
+    top: 7.9375rem;
+    left: 1.75rem;
+    opacity: 0.9;
+    box-shadow: 0 0 17px 5px rgba(240, 240, 240, 0.7), inset -1px 8px 1px rgba(230, 230, 230, 0.5);
+    animation: cloud 10s alternate-reverse infinite;
+  }
+  section .cloud:after {
+    width: 4.6875rem;
+    height: 4.6875rem;
+    top: -1.9375rem;
+    left: 0.75rem;
+    border-radius: 6.25rem;
+    box-shadow: inset -5px 10px 4px rgba(230, 230, 230, 0.5);
+  }
+  section .cloud:before {
+    width: 5.625rem;
+    height: 5.625rem;
+    top: -2.8125rem;
+    right: 1.5625rem;
+    border-radius: 12.5rem;
+    z-index: 1;
+    box-shadow: -10px 30px 0px #fff, inset -5px 0px 4px rgba(230, 230, 230, 0.5);
+  }
+  section .cloud:nth-child(2) {
+    z-index: 0;
+    background: #fff;
+    opacity: 0.4;
+    transform: scale(0.5) translate(-8rem, -7rem);
+    animation: cloud 8s linear infinite;
+  }
+  section .cloud:nth-child(2):after {
+    background: #fff;
+  }
+
+  .cloud:nth-child(2) > .rain div {
+    z-index: -1;
+  }
+
+  @keyframes cloud {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0.7;
+    }
+    50% {
+      opacity: 0.8;
+    }
+    75% {
+      opacity: 0.8;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.5) translate(150%, -10rem);
+    }
+  }
+  .rain div {
+    content: " ";
+    position: absolute;
+    z-index: 1;
+    display: block;
+    top: 110%;
+    left: 50%;
+    height: 0.5rem;
+    width: 0.5rem;
+    background: #4d90fe;
+    background: linear-gradient(to bottom, #3987c9 0%, #e1e5ed 100%);
+    border-radius: 100% 0 80% 80%/80% 0 100% 80%;
+    transform: rotate(-30deg);
+    opacity: 0;
+    animation: rain 0.7s infinite ease-in;
+  }
+
+  .rain div:nth-child(2) {
+    left: 25%;
+    animation-delay: 0.3s;
+  }
+
+  .rain div:nth-child(3) {
+    left: 70%;
+    top: 105%;
+    animation-delay: 0.6s;
+  }
+
+  .rain div:nth-child(4) {
+    left: 40%;
+    top: 105%;
+    z-index: -1;
+    animation-delay: 0.9s;
+  }
+
+  .rain div:nth-child(5) {
+    left: 90%;
+    top: 80%;
+    animation-delay: 1.2s;
+  }
+
+  .rain div:nth-child(6) {
+    left: 20%;
+    top: 80%;
+    animation-delay: 1.5s;
+  }
+
+  .rain div:nth-child(7) {
+    left: 55%;
+    top: 75%;
+    animation-delay: 1.9s;
+  }
+
+  .rain div:nth-child(1) {
+    left: 75%;
+    top: 75%;
+    animation-delay: 2.2s;
+  }
+
+  @keyframes rain {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-30px, 170px) skewY(-30deg);
+    }
+  }
+  @keyframes sun {
+    0% {
+      box-shadow: 0 0 80px 5px #ffc100, inset 0 0 40px 5px #ff900d;
+    }
+    50% {
+      box-shadow: 0 0 80px 25px #ffc100, inset 0 0 40px 5px #ff900d;
+    }
+    100% {
+      box-shadow: 0 0 80px 5px #ffc100, inset 0 0 40px 5px #ff900d;
+    }
+  }
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 5%; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+    z-index: 999; /* Ensure it appears above other content */
+}
+
+
